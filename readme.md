@@ -1,11 +1,11 @@
 # CSC780 - Application Development for Mobile Devices, Spring 2022
 ## Final Project Proposal 
-## Project Name : CherryPick (An iOS Application )
+### Project Name : CherryPick (An iOS Application )
 
-* Executive Summary 
+## Executive Summary 
 > The mobile application ‘CherryPick’ has been developed with GPS direction where users can play a fruit picking game using location from anywhere in the world.Users will be able to have more fun playing the game while visiting those places. 
 
-* Functional Features (Must have)
+## Functional Features (Must have)
 - Users shall be able to LogIn, Register & Logout for the mobile application.
 - Registration & Login shall include emailId and password fields.
 - Users shall receive alerts pop up about the invalid emailId & password length.
@@ -18,7 +18,7 @@
 - Firebase Authentication shall be used in Login, and Registration process.
 - The application should follow established architecture patterns MVC
 
-* Non Functional Features (Nice to have)
+## Non Functional Features (Nice to have)
 - Multiple players shall be competing.
 - The language used shall be localized.
 
@@ -35,7 +35,7 @@
 - Version Control System: Github
 - Architecture Pattern : MVC
 
-* Prototyping in Figma
+## Prototyping in Figma
 
 
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>294028587778-h36ealcr6ghcu0ptm5nda3j510u40cnp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.294028587778-h36ealcr6ghcu0ptm5nda3j510u40cnp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDSG2vuIHwVQ0OKl9QT4kQCVGxrx4hQFRM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>294028587778</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>jammy.sust.CherryPick</string>
+	<key>PROJECT_ID</key>
+	<string>cherry-pick-328b4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cherry-pick-328b4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:294028587778:ios:d99f53f4a89cc25a4f081b</string>
+</dict>
+</plist>

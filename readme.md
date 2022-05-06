@@ -1,5 +1,4 @@
-# CSC780 - Application Development for Mobile Devices, Spring 2022
-## Final Project Proposal 
+# CSC780 - Application Development for Mobile Devices, Spring 2022, Final Project Proposal 
 ### Project Name : CherryPick (An iOS Application )
 
 ## Executive Summary 

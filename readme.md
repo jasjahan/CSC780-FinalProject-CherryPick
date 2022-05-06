@@ -22,7 +22,7 @@
 - Multiple players shall be competing.
 - The language used shall be localized.
 
-* High-level system architecture and Technology stack
+## High-level system architecture and Technology stack
 - Operating System: macOS Monterey 12.3.1
 - Language: Swift 
 - Mapping Technology: Apple Maps

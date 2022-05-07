@@ -98,13 +98,13 @@
 				DC67B68D2823142F00322A14 /* LoginViewController.swift */,
 				DC4E0EEB282364BD00BC5E54 /* MapViewController.swift */,
 				DC4E0EED282364FB00BC5E54 /* FruitViewController.swift */,
+				DC6EA3412825BF3100A90BE4 /* FruitLocation.swift */,
 				DC67B6942823143200322A14 /* LaunchScreen.storyboard */,
 				DC67B68F2823142F00322A14 /* Main.storyboard */,
 				DC67B6922823143200322A14 /* Assets.xcassets */,
 				DC67B6972823143200322A14 /* Info.plist */,
 				DC6EA33A28258DF200A90BE4 /* CherryPickDataModel.xcdatamodeld */,
 				DC6EA33D28258FB600A90BE4 /* Model.swift */,
-				DC6EA3412825BF3100A90BE4 /* FruitLocation.swift */,
 			);
 			path = CherryPick;
 			sourceTree = "<group>";

@@ -48,3 +48,21 @@ func getAllFruits()-> [Fruit]{
     }
     return []
 }
+
+func getFruit(picked:Bool) -> [Fruit]{
+    
+    if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+        let fetchRequest = Fruit.fetchRequest() as NSFetchRequest<Fruit>
+        
+        if picked {
+            fetchRequest.predicate = NSPredicate(format: "picked == true")
+        } else{
+            fetchRequest.predicate = NSPredicate(format: "picked == false")
+        }
+       
+        if let fruits = try? context.fetch(fetchRequest){
+                    return fruits
+        }
+    }
+    return []
+}

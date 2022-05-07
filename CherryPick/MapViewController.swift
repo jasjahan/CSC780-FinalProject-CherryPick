@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     
     var manager = CLLocationManager()
@@ -27,7 +27,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         } else {
             manager.requestWhenInUseAuthorization()
         }
-
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -45,9 +45,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             (timer) in if let center = self.manager.location?.coordinate{
                 var centerCoordinate = center
                 centerCoordinate.latitude = centerCoordinate.latitude +
-                                            (Double.random(in: 0...200) - 100.0)/50000.0
+                (Double.random(in: 0...200) - 100.0)/40000.0
                 centerCoordinate.longitude = centerCoordinate.longitude +
-                                            (Double.random(in: 0...200) - 100.0)/50000.0
+                (Double.random(in: 0...200) - 100.0)/40000.0
                 
                 if let randomFruits = self.fruit.randomElement(){
                     let location = FruitLocation(coord: centerCoordinate, fruit: randomFruits)
@@ -77,6 +77,46 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return annoView
     }
     
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        mapView.deselectAnnotation(view.annotation, animated: true)
+        
+        if view.annotation is MKUserLocation{
+            
+        }else{
+            if let center = manager.location?.coordinate{
+                if let fruitCenter = view.annotation?.coordinate{
+                    let region = MKCoordinateRegion(center: fruitCenter, latitudinalMeters: 200, longitudinalMeters: 200)
+                    mapView.setRegion(region, animated:false)
+                    if let fruitLocation = view.annotation as? FruitLocation{
+                        
+                        if let fruitname = fruitLocation.fruit.name{
+                            
+                            if mapView.visibleMapRect.contains(MKMapPoint(center)){
+                                fruitLocation.fruit.picked = true
+                                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                                
+                                let aleartVC = UIAlertController(title: "Congrats!", message: "You cought a \(fruitname)", preferredStyle:.alert)
+                                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                                aleartVC.addAction(okAction)
+                                present(aleartVC, animated: true, completion: nil)
+                                
+                            } else{
+                                let aleartVC = UIAlertController(title: "Oh!", message: "You are too far away to pick \(fruitname)!", preferredStyle:.alert)
+                                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                                
+                                aleartVC.addAction(okAction)
+                                present(aleartVC, animated: true, completion: nil)
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if count < 3 {
             if let center = manager.location?.coordinate{
@@ -92,6 +132,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
+    
     @IBAction func zoomOut(_ sender: Any) {
         if let center = manager.location?.coordinate{
             let region = MKCoordinateRegion(center: center,
@@ -100,6 +141,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             mapView.setRegion(region, animated: true)
         }
     }
+    
     
     @IBAction func centerTouch(_ sender: Any) {
         self.performSegue(withIdentifier: "ToFruitViewController", sender: nil)

@@ -4,6 +4,19 @@
 ## Executive Summary 
 > The mobile application ‘CherryPick’ has been developed with GPS direction where users can play a fruit picking game using location from anywhere in the world.Users will be able to have more fun playing the game while visiting those places. 
 
+## High-level system architecture and Technology stack
+- Operating System: macOS Monterey 12.3.1
+- Language: Swift 
+- Mapping Technology: Apple Maps
+- IDE: Xcode
+- UI Frameworks: UIKit
+- Backend: Firebase
+- Dependency Management: CocoaPods - pod 'FirebaseAnalytics', pod 'FirebaseAuth'
+- Testing/Debugging: iOS Simulator
+- Version Control System: Github
+- Architecture Pattern : MVC
+- Framework: CoreData
+
 ## Functional Features (Must have)
 - Users shall be able to LogIn, Register & Logout for the mobile application.
 - Registration & Login shall include emailId and password fields.
@@ -21,20 +34,10 @@
 - Multiple players shall be competing.
 - The language used shall be localized.
 
-## High-level system architecture and Technology stack
-- Operating System: macOS Monterey 12.3.1
-- Language: Swift 
-- Mapping Technology: Apple Maps
-- IDE: Xcode
-- Framework: CoreData
-- UI Frameworks: UIKit
-- Backend: Firebase
-- Dependency Management: CocoaPods - pod 'FirebaseAnalytics', pod 'FirebaseAuth'
-- Testing/Debugging: iOS Simulator
-- Version Control System: Github
-- Architecture Pattern : MVC
+> For more details on prototyping in Figma see the pdf file.
 
-## Prototyping in Figma
+
+
 
 
 

@@ -74,6 +74,7 @@ class FruitViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    
     @IBAction func logOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()

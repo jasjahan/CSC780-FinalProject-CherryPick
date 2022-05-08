@@ -1,8 +1,9 @@
-# CSC780 - Application Development for Mobile Devices, Spring 2022, Final Project Proposal 
+# CSC780 - Application Development for Mobile Devices, Spring 2022
+## Final Project Proposal by Jasmine Jahan,SFSU ID 920115557
 ### Project Name : CherryPick (An iOS Application )
 
 ## Executive Summary 
-> The mobile application ‘CherryPick’ has been developed with GPS direction where users can play a fruit picking game using location from anywhere in the world.Users will be able to have more fun playing the game while visiting those places. 
+> The mobile application ‘CherryPick’ has been developed with GPS direction where users can play a fruit picking game using location from anywhere in the world. Users will be able to have more fun playing the game while visiting various places. 
 
 ## High-level system architecture and Technology stack
 - Operating System: macOS Monterey 12.3.1
@@ -34,7 +35,7 @@
 - Multiple players shall be competing.
 - The language used shall be localized.
 
-> For more details on prototyping in Figma see the pdf file.
+> For more details on prototyping in Figma & used resources see the "CSC780 Milestones Document" file.
 
 
 

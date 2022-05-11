@@ -17,6 +17,7 @@
 - Version Control System: Github
 - Architecture Pattern : MVC
 - Framework: CoreData
+- Property List: Privacy - Location When In Use Usage Description
 
 ## Functional Features (Must have)
 - Users shall be able to LogIn, Register & Logout for the mobile application.

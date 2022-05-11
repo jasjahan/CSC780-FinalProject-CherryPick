@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
             register.setTitle("New Player Register", for: .normal)
         }else{
             registerOption = true
-            register.setTitle("Exsisting Player LogIN", for: .normal)
+            register.setTitle("Exsisting Player LogIn", for: .normal)
             login.setTitle("SignUp", for: .normal)
         }
     }

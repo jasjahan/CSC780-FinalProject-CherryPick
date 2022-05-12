@@ -64,6 +64,7 @@ class LoginViewController: UIViewController {
         present(errorVC, animated: true, completion: nil)
     }
     
+    
     @IBAction func registerTapped(_ sender: Any) {
         if registerOption{
             registerOption = false

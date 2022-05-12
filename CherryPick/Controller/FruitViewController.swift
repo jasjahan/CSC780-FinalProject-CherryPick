@@ -26,11 +26,13 @@ class FruitViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
     }
     
+    // tableView sections
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
+    // tableview section headers
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
@@ -40,6 +42,7 @@ class FruitViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    // tableView section count
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
@@ -49,6 +52,7 @@ class FruitViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    // tableView cell populate with indexPath
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
@@ -65,12 +69,12 @@ class FruitViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    
+    // tableView cells tap delete option
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
     
-    
+    // tableview cells tap delete action
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             tableView.beginUpdates()
@@ -80,7 +84,7 @@ class FruitViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    
+    // logout from the application and take to the main screen 
     @IBAction func logOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()

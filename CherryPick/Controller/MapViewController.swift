@@ -30,12 +30,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
+    //getting the user location
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse{
             setup()
         }
     }
     
+    
+    // creating some random fruits around the user using timer & map location
     func setup(){
         mapView.showsUserLocation = true
         manager.startUpdatingLocation()
@@ -59,6 +62,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
+    // creating user with user information
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let annoView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
         if annotation is MKUserLocation{
@@ -77,6 +81,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return annoView
     }
     
+    // picking fruits and limit the location where user won't be able to pick any fruits
+    //using FruitLocation CLLocationCoordinate2D class
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         mapView.deselectAnnotation(view.annotation, animated: true)
@@ -117,6 +123,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
+    
+    //location update using CLLocationManager
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if count < 3 {
             if let center = manager.location?.coordinate{
@@ -132,6 +140,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
+    //getting the precise location of the user with a button so that when playing game
+    //if the fruit is toofar away user can easily move to the cutrrent location
     
     @IBAction func zoomOut(_ sender: Any) {
         if let center = manager.location?.coordinate{
@@ -142,6 +152,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
+    
+    //screen navigation from mapView to fruitView so that user
+    //can easily check anytime how many fruits are left to be picked
     
     @IBAction func centerTouch(_ sender: Any) {
         self.performSegue(withIdentifier: "ToFruitViewController", sender: nil)

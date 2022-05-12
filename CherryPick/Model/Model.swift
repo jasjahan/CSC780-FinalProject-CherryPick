@@ -30,9 +30,9 @@ func pickAllFruit(){
     
 }
 
+// creating fruits using the coredata info
 
 func createFruit(name: String, imageName: String){
-    
     if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
         let fruit = Fruit(context: context)
         fruit.imageName = imageName
@@ -42,9 +42,11 @@ func createFruit(name: String, imageName: String){
 }
 
 
+//fetch request to get coredata info about fruits
 func getAllFruits()-> [Fruit]{
     
     if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+        //get all the objects from the coredata which are Fruit type using fetchrequest
         if let fruitData = try? context.fetch(Fruit.fetchRequest()) as? [Fruit]{
             if let fruits = try? fruitData {
                 if fruits.count == 0{
@@ -63,6 +65,8 @@ func getAllFruits()-> [Fruit]{
 func getFruit(picked:Bool) -> [Fruit]{
     
     if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+        
+        // custom fetchRequest to differentiate picked and unpicked fruits using NSFetchRequest
         let fetchRequest = Fruit.fetchRequest() as NSFetchRequest<Fruit>
         
         if picked {

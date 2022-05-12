@@ -36,6 +36,12 @@
 - Multiple players shall be competing.
 - The language used shall be localized.
 
+## Challenges
+- Among the challenges I ran into in this project was, most of the tutorials/documentations were out of date, and I needed to watch a lot of recent documentation as well as read QA’s. 
+- Although I started it from scratch, not knowing anything about iOS development before, the precision of the application outlines all of the hard work & dedication.
+- Last but not least, it was an unfortunate experience to see my teammate left the team and join others in the middle of the semester. I was unable to find any teammates since everyone already formed a team.  
+
+
 > For more details on prototyping in Figma & used resources see the "CSC780 Milestones Document" file.
 
 

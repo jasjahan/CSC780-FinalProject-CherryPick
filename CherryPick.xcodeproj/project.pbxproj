@@ -90,14 +90,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		DC0D87A1282C314A00C0632A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DC67B68F2823142F00322A14 /* Main.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		DC67B67D2823142F00322A14 = {
 			isa = PBXGroup;
 			children = (
@@ -119,12 +111,12 @@
 		DC67B6882823142F00322A14 /* CherryPick */ = {
 			isa = PBXGroup;
 			children = (
-				DC0D87A1282C314A00C0632A /* View */,
 				DC0D87A0282C313700C0632A /* Model */,
 				DC0D879F282C310500C0632A /* Controller */,
 				DC67B6892823142F00322A14 /* AppDelegate.swift */,
 				DC67B68B2823142F00322A14 /* SceneDelegate.swift */,
 				DC67B6942823143200322A14 /* LaunchScreen.storyboard */,
+				DC67B68F2823142F00322A14 /* Main.storyboard */,
 				DC67B6922823143200322A14 /* Assets.xcassets */,
 				DC67B69D282314BC00322A14 /* GoogleService-Info.plist */,
 				DC67B6972823143200322A14 /* Info.plist */,

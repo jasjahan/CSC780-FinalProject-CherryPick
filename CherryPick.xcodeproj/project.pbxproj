@@ -98,10 +98,10 @@
 				DC67B68F2823142F00322A14 /* Main.storyboard */,
 				DC67B6922823143200322A14 /* Assets.xcassets */,
 				DC67B69D282314BC00322A14 /* GoogleService-Info.plist */,
-				DC6EA3412825BF3100A90BE4 /* FruitLocation.swift */,
 				DC67B68D2823142F00322A14 /* LoginViewController.swift */,
 				DC4E0EEB282364BD00BC5E54 /* MapViewController.swift */,
 				DC4E0EED282364FB00BC5E54 /* FruitViewController.swift */,
+				DC6EA3412825BF3100A90BE4 /* FruitLocation.swift */,
 				DC67B6972823143200322A14 /* Info.plist */,
 				DC6EA33D28258FB600A90BE4 /* Model.swift */,
 				DC6EA33A28258DF200A90BE4 /* CherryPickDataModel.xcdatamodeld */,
@@ -383,8 +383,9 @@
 				DEVELOPMENT_TEAM = TYWTDH9X79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CherryPick/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To pick some fruits, provide your location!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -412,8 +413,9 @@
 				DEVELOPMENT_TEAM = TYWTDH9X79;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CherryPick/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To pick some fruits, provide your location!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

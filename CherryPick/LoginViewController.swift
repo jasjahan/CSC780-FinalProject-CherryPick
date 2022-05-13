@@ -28,8 +28,9 @@ class LoginViewController: UIViewController {
         if let emailId = email.text{
             if let pass = password.text{
                 if registerOption{
-                    Auth.auth().createUser(withEmail: emailId, password: pass) { authResult, error in
-                        guard let user = authResult?.user, error == nil else {
+                    Auth.auth().createUser(withEmail: emailId, password: pass)
+                    { authResult, error in
+                        guard let _ = authResult?.user, error == nil else {
                             self.presentAlert(alert: error!.localizedDescription)
                             // print(error!.localizedDescription)
                             return
@@ -38,8 +39,9 @@ class LoginViewController: UIViewController {
                         self.performSegue(withIdentifier: "ToMapViewController", sender: nil)
                     }
                 }else{
-                    Auth.auth().signIn(withEmail: emailId, password: pass) { authResult, error in
-                        guard let user = authResult?.user, error == nil else {
+                    Auth.auth().signIn(withEmail: emailId, password: pass)
+                    { authResult, error in
+                        guard let _ = authResult?.user, error == nil else {
                             self.presentAlert(alert: error!.localizedDescription)
                             return
                         }

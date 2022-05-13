@@ -43,19 +43,25 @@ func createFruit(name: String, imageName: String){
 
 
 //fetch request to get coredata info about fruits
-func getAllFruits()-> [Fruit]{
+func getAllFruits() -> [Fruit]{
     
     if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
         //get all the objects from the coredata which are Fruit type using fetchrequest
         if let fruitData = try? context.fetch(Fruit.fetchRequest()) as? [Fruit]{
-            if let fruits = try? fruitData {
-                if fruits.count == 0{
-                    pickAllFruit()
-                    return getAllFruits()
-                }else{
-                    return fruits
-                }
+            if fruitData.count == 0{
+                pickAllFruit()
+                return getAllFruits()
+            }else{
+                return fruitData
             }
+//            if let fruits = try? fruitData {
+//                if fruits.count == 0{
+//                    pickAllFruit()
+//                    return getAllFruits()
+//                }else{
+//                    return fruits
+//                }
+//            }
         }
     }
     return []
